@@ -1,9 +1,7 @@
 import pandas as pd
 
 df=pd.read_csv("Ventas_totales.csv")
-df.head()
-
-
+print(df)
 
 df['salon_ventas'] = df['salon_ventas'].fillna(round(df['salon_ventas'].mean(),1))
 valores_nulos=df.isnull().sum()
